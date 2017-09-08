@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+	int t;
+	cin>>t;
+	for(int k=0;k<t;k++)
+	{
+	int cost1=0,cost2=0,cost3=0,cost4=0,sum1=0,sum2=0,min=0;
+	int n;
+	int i,j;
+	cin>>n;
+ 
+long long a[n],b[n];
+	
+	for(j=0;j<n;j++)
+	{
+	cin>>a[j];
+	}
+	for(j=0;j<n;j++)
+	{
+	cin>>b[j];
+	}
+	for(i=0;i<n;i++)
+	{
+		if(i%2==0)
+		{
+			cost1+=a[i];
+			//cout<<cost1<<endl;
+			cost2+=b[i];
+		//	cout<<cost2<<endl;
+			}
+		if(i%2!=0)
+		{
+			cost3+=a[i];
+			//cout<<cost3<<endl;
+			cost4+=b[i];
+		//	cout<<cost4<<endl;
+			}
+	}
+	sum1=cost1+cost4;
+	//cout<<sum1<<endl;
+	sum2=cost2+cost3;
+	//cout<<sum2<<endl;
+	if(sum1<sum2)
+	min=sum1;
+	else
+	min=sum2;
+	cout<<min<<endl;
+	
+	}
+			
+ 
+	return 0;
+}
